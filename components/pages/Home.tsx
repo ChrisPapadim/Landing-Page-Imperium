@@ -43,8 +43,15 @@ const Home: React.FC = () => {
       <Showcase />
       
       {/* Full Features Section */}
-      <section id="features" className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="features" className="py-20 bg-white relative overflow-hidden">
+        {/* Background elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-10 left-[8%] w-20 h-20 border border-brand-100/30 rounded-2xl rotate-12 animate-drift" />
+          <div className="absolute bottom-20 right-[8%] w-14 h-14 bg-brand-50/50 rounded-full animate-float" style={{ animationDelay: '2s' }} />
+          <div className="absolute top-1/2 right-[3%] w-8 h-8 border border-brand-200/20 rounded-lg animate-float-reverse" />
+        </div>
+        
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="font-serif text-3xl text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-brand-700 mb-4">All Features</h2>
             <p className="text-lg text-slate-600">Everything you need to redesign your space.</p>
@@ -120,8 +127,14 @@ const FAQSection: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-20 bg-white">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="py-20 bg-white relative overflow-hidden">
+      {/* Subtle background elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 right-[5%] w-24 h-24 border border-brand-100/40 rounded-full animate-float" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-20 left-[5%] w-16 h-16 border border-brand-200/30 rounded-xl animate-float-reverse" />
+      </div>
+      
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <h2 className="font-serif text-3xl text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-brand-700 mb-12 text-center">Frequently Asked Questions</h2>
         
         <div className="space-y-4">
